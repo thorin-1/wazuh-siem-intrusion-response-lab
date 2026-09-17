@@ -1,0 +1,44 @@
+# Secrets / credentials
+*.key
+*.pem
+*.pfx
+*.p12
+*.kdb
+.env
+.env.*
+secrets.*
+credentials.*
+
+# Logs / captures / SIEM exports
+*.log
+*.pcap
+*.pcapng
+*.evtx
+archives.json
+alerts.json
+
+# Virtual machines / disks
+*.vmdk
+*.vdi
+*.vhd
+*.vhdx
+*.ova
+*.ovf
+*.vmem
+*.vmss
+*.vmsn
+*.vmx~
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.tmp
+
+# Archives
+*.zip
+*.7z
+*.tar
+*.gz

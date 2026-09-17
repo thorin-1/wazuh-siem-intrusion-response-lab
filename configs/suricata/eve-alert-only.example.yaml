@@ -1,0 +1,11 @@
+# Portfolio extract only — merge into the appropriate eve-log section of suricata.yaml.
+# The lab restricted EVE JSON to alert events after stats/flow telemetry exceeded
+# Wazuh's practical JSON field volume during this implementation.
+
+outputs:
+  - eve-log:
+      enabled: yes
+      filetype: regular
+      filename: eve.json
+      types:
+        - alert

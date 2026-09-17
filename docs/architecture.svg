@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <style>
+      .bg{fill:#0d1117}.box{fill:#161b22;stroke:#58a6ff;stroke-width:2}.box2{fill:#161b22;stroke:#3fb950;stroke-width:2}.box3{fill:#161b22;stroke:#d29922;stroke-width:2}.t{fill:#f0f6fc;font-family:Arial,sans-serif}.muted{fill:#8b949e;font-family:Arial,sans-serif}.h{font-size:28px;font-weight:700}.m{font-size:20px}.s{font-size:17px}.arrow{stroke:#8b949e;stroke-width:3;fill:none;marker-end:url(#a)}.resp{stroke:#f85149;stroke-width:3;fill:none;marker-end:url(#r)}
+    </style>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#8b949e"/></marker>
+    <marker id="r" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#f85149"/></marker>
+  </defs>
+  <rect class="bg" width="1400" height="760" rx="20"/>
+  <text x="70" y="70" class="t h">Wazuh SIEM Intrusion Detection &amp; Automated Response Lab</text>
+  <text x="70" y="105" class="muted m">Isolated VMware NAT network — 192.168.226.0/24</text>
+
+  <rect x="70" y="180" width="340" height="330" rx="18" class="box3"/>
+  <text x="105" y="230" class="t h">Parrot Security OS</text>
+  <text x="105" y="265" class="muted m">192.168.226.131</text>
+  <text x="105" y="320" class="t m">Validation / attack simulation</text>
+  <text x="105" y="365" class="muted s">• Nmap SYN scan</text><text x="105" y="400" class="muted s">• Hydra SSH attempts</text><text x="105" y="435" class="muted s">• ICMP flood</text><text x="105" y="470" class="muted s">• hping3 SYN flood</text>
+
+  <rect x="530" y="150" width="360" height="420" rx="18" class="box"/>
+  <text x="565" y="205" class="t h">Windows Server 2025</text>
+  <text x="565" y="240" class="muted m">192.168.226.130</text>
+  <text x="565" y="300" class="t m">Monitored endpoint</text>
+  <text x="565" y="345" class="muted s">• Wazuh Agent</text><text x="565" y="380" class="muted s">• Suricata 8.0.6 + Npcap</text><text x="565" y="415" class="muted s">• Sysmon</text><text x="565" y="450" class="muted s">• Windows Event Logs</text><text x="565" y="485" class="muted s">• Windows Firewall</text><text x="565" y="530" class="t s">Enforcement point for Active Response</text>
+
+  <rect x="1010" y="180" width="320" height="330" rx="18" class="box2"/>
+  <text x="1045" y="230" class="t h">Ubuntu Server 24.04</text>
+  <text x="1045" y="265" class="muted m">192.168.226.129</text>
+  <text x="1045" y="320" class="t m">SIEM core</text>
+  <text x="1045" y="365" class="muted s">• Wazuh Manager</text><text x="1045" y="400" class="muted s">• Wazuh Indexer</text><text x="1045" y="435" class="muted s">• Wazuh Dashboard</text><text x="1045" y="470" class="muted s">• Postfix alert delivery</text>
+
+  <path d="M410 330 C455 330 485 330 530 330" class="arrow"/><text x="425" y="305" class="muted s">controlled traffic</text>
+  <path d="M890 315 C935 315 965 315 1010 315" class="arrow"/><text x="900" y="290" class="muted s">EVE JSON + events</text>
+  <path d="M1010 455 C965 600 935 620 890 510" class="resp"/><text x="925" y="650" class="t s">Active Response: block / unblock source IP</text>
+
+  <rect x="270" y="630" width="620" height="70" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="300" y="673" class="t m">Detect → Correlate → Alert → Contain → Audit → Recover</text>
+</svg>

@@ -1,0 +1,14 @@
+<!-- Sanitized extract from the Wazuh manager configuration. -->
+<command>
+  <name>suricata-block</name>
+  <executable>suricata-block.cmd</executable>
+  <timeout_allowed>yes</timeout_allowed>
+</command>
+
+<active-response>
+  <disabled>no</disabled>
+  <command>suricata-block</command>
+  <location>local</location>
+  <rules_id>100013</rules_id>
+  <timeout>60</timeout>
+</active-response>

@@ -1,0 +1,31 @@
+<!-- Sanitized portfolio extract. Do not replace a complete ossec.conf with this file. -->
+<ossec_config>
+  <client>
+    <server>
+      <address>192.168.226.129</address>
+      <port>1514</port>
+      <protocol>tcp</protocol>
+    </server>
+    <crypto_method>aes</crypto_method>
+    <notify_time>240</notify_time>
+    <time-reconnect>60</time-reconnect>
+    <auto_restart>yes</auto_restart>
+    <enrollment>
+      <enabled>yes</enabled>
+      <agent_name>WIN-SRV25</agent_name>
+      <groups>default</groups>
+    </enrollment>
+  </client>
+
+  <client_buffer>
+    <disabled>no</disabled>
+    <queue_size>20000</queue_size>
+    <events_per_second>1000</events_per_second>
+  </client_buffer>
+
+  <!-- The completed lab also collected Windows Application/Security events,
+       Suricata eve.json and Microsoft-Windows-Sysmon/Operational. Exact
+       localfile blocks are intentionally not reconstructed here because the
+       full original XML was not preserved in the source material used to
+       build this portfolio package. -->
+</ossec_config>

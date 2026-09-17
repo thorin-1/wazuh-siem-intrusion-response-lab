@@ -1,0 +1,45 @@
+<group name="local,syslog,suricata,">
+
+  <rule id="100010" level="8">
+    <if_sid>86601</if_sid>
+    <match>CUSTOM Possible Nmap Scan Detected</match>
+    <description>Custom rule: Nmap scan detected by Suricata - elevated severity</description>
+  </rule>
+
+  <rule id="100011" level="8">
+    <if_sid>86601</if_sid>
+    <match>CUSTOM Possible SSH Brute Force Attempt</match>
+    <description>Custom rule: SSH brute force detected by Suricata - elevated severity</description>
+  </rule>
+
+  <rule id="100012" level="8">
+    <if_sid>86601</if_sid>
+    <match>CUSTOM Possible ICMP Flood</match>
+    <description>Custom rule: ICMP flood detected by Suricata - elevated severity</description>
+  </rule>
+
+  <rule id="100013" level="8">
+    <if_sid>86601</if_sid>
+    <match>CUSTOM Possible SYN Flood Dos Attack</match>
+    <description>Custom rule: SYN Flood Dos attack detected by Suricata - elevated severity</description>
+  </rule>
+
+  <rule id="100014" level="8">
+    <if_sid>60600</if_sid>
+    <decoded_as>windows_eventchannel</decoded_as>
+    <field name="win.system.providerName" type="pcre2">^Wazuh-Suricata-Response$</field>
+    <field name="win.system.eventID" type="pcre2">^9001$</field>
+    <description>Active Response: Attacker IP automatically blocked by Windows Firewall</description>
+    <group>active_response,windows_firewall,</group>
+  </rule>
+
+  <rule id="100015" level="5">
+    <if_sid>60600</if_sid>
+    <decoded_as>windows_eventchannel</decoded_as>
+    <field name="win.system.providerName" type="pcre2">^Wazuh-Suricata-Response$</field>
+    <field name="win.system.eventID" type="pcre2">^9002$</field>
+    <description>Active Response: Temporary Windows Firewall block removed</description>
+    <group>active_response,windows_firewall,</group>
+  </rule>
+
+</group>
